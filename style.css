@@ -68,14 +68,3 @@ li.done{
     color: #888;
     background-color: #d1ffd1;
 }
-.high {
-  color: red;
-}
-
-.medium {
-  color: orange;
-}
-
-.low {
-  color: green;
-}
