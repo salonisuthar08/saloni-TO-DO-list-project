@@ -1,6 +1,14 @@
 
 
 function addTask() {
+    const taskInput = document.getElementById('inputTask');
+    const taskText = taskInput.value.trim(); 
+
+    // Check if the input is empty
+    if (taskText === "") {
+        alert("Please enter a task before adding.");
+        return;
+    }
     const newTask = document.createElement('li');
 
     const Tasklist = document.getElementById('Tasklist');

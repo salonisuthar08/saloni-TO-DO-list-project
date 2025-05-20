@@ -8,14 +8,46 @@ body{
     background-color: rgb(232, 201, 244);
 }
 
-.container{
-    border: none;
-    border-radius: 15px;
-    background-color: rgb(163, 144, 210);
-    height: 50vh;
-    width: 25vw;
-    box-shadow: 4px 5px 6px;
+.task-input-container {
+  display: flex;
+  justify-content: center;     
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 auto;             
+  max-width: 600px;            
 }
+
+.task-input-container input[type="text"] {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+ 
+.task-input-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container {
+    background-color: rgb(163, 144, 210);
+    min-height: 400px;
+    height: fit-content;
+    width: 90%;
+    max-width: 600px; 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 5px 6px;
+    box-sizing: border-box;
+}
+
 
 .header{
     text-align: center;
@@ -28,14 +60,18 @@ body{
 
 .AddTask{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-input{
-    padding: 7px;
-    border-radius: 5px;
-    
-}
+
+
+/*input[type="text"],
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}*/
 
 button:hover{
     border: 1px solid black;
@@ -67,4 +103,15 @@ li.done{
     text-decoration: line-through;
     color: #888;
     background-color: #d1ffd1;
+}
+
+@media (max-width: 400px) {
+  .task-input-container {
+    flex-direction: column;
+     align-items: stretch;
+  }
+
+  .task-input-container button {
+    width: 100%;
+  }
 }
